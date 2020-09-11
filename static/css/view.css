@@ -1,0 +1,59 @@
+img {
+    max-width:60%;
+    height:auto;
+    padding: 0px;
+    border: solid 2px;
+    border-color: black;
+    border-radius: 10px;
+}
+
+.detected {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+}
+
+.detected h1 {
+    margin: 25px;
+}
+
+hr {
+    margin: 50px 20px;
+    border: solid 1px #333333;
+}
+
+h4 {
+    margin-bottom: 30px;
+}
+
+table {
+    max-width: 30%;
+    text-align: center;
+    box-shadow: 5px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.fixedatthetop {
+    top: 0;
+    position: fixed;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    padding: 10px 40px;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.buttons {
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 10px 50px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+}

@@ -1,0 +1,14 @@
+httpx
+googletrans
+pytesseract
+opencv-python
+pillow
+scrapy
+termcolor
+beautifultable
+reprint
+click
+json
+shutil
+imghdr
+hashlib

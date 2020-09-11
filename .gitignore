@@ -1,0 +1,5 @@
+resume.json
+output/
+logs/
+__pycache__/
+lib/__pycache__/
