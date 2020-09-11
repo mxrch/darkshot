@@ -103,7 +103,7 @@ $ git clone https://github.com/mxrch/darkshot
 $ cd darkshot
 $ python -m pip install -r requirements.txt
 ```
-Then, we need to check if the choosen OCR langs in **config.py** are installed, and if not, it will auto-download and install them.\
+Then, we need to check if the choosen OCR langs in **config.py** are installed, and if not, it will auto-download and install them.
 - Run the file **check_ocr_langs.py** as Administrator.
 
 If it tells you that it's okay, then it's okay. 🧠
