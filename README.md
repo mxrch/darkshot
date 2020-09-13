@@ -143,7 +143,7 @@ By default, I made 3 detection functions:
 ## Detection groups
 1. Go in the file and look at the class, you'll see some functions and then the **Groups detection functions** (credentials, personal, banking and confidential).
 2. For your first detection group, you can simply copy & paste below the confidential group function.
-3. Change the function name to your desired name, as well as the "group_name" variable below.
+3. Change the function name to your desired name, as well as the `group_name` variable below.
 4. Then, you just put the detection functions you want with your keywords in it, where you see the `detec_state` variables.
 5. You now can add your group in `self.groups`, inside the `__init__` function. If your function is named secretsaliens, put `self.secretsaliens`.
 
@@ -180,7 +180,7 @@ You can find them here :
 ![](https://files.catbox.moe/0s82uu.PNG)
 
 If you want to make your own detection function, you can :
-1. Copy & paste the "basicDetection" function below.
+1. Copy & paste the `basicDetection` function below.
 2. Next, you can modify the conditions and everything you want.
 
 You only need to keep the function args, and the return of `detec_state` if the detection finds nothing.\
