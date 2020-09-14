@@ -8,6 +8,4 @@ termcolor
 beautifultable
 reprint
 click
-shutil
 imghdr
-hashlib
