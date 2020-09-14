@@ -93,7 +93,7 @@ hashlib
 
 ## 1. Tesseract-OCR
 
-You'll find installation instructions for all main plateforms here : https://github.com/tesseract-ocr/tesseract/wiki \
+You'll find installation instructions for all main platforms here : https://github.com/tesseract-ocr/tesseract/wiki \
 **Don't forget to add tesseract to your PATH.**
 
 ## 2. Darkshot
@@ -103,7 +103,7 @@ $ git clone https://github.com/mxrch/darkshot
 $ cd darkshot
 $ python -m pip install -r requirements.txt
 ```
-Then, we need to check if the choosen OCR langs in **config.py** are installed, and if not, it will auto-download and install them.
+Then, we need to check if the chosen OCR langs in **config.py** are installed, and if not, it will auto-download and install them.
 - Run the file **check_ocr_langs.py** as Administrator.
 
 If it tells you that it's okay, then it's okay. 🧠
@@ -125,7 +125,7 @@ To calculate it, it sums the number of threads with the value in config.py.
 
 #### Threads results delimiter
 While we don't end the threads, their results are kept in the memory.\
-Since Darkshot is designed to keep running several years, we can't keep the threads results indefinitly in the memory.\
+Since Darkshot is designed to keep running several years, we can't keep the threads results indefinitely in the memory.\
 So, it takes the value in config.py (example: 100), and it will unload and restart threads each 100 links.
 
 #### Unwanted pictures folder
