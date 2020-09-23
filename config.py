@@ -22,14 +22,15 @@ words_to_translate = ['password', 'credential', 'credentials', 'address', 'email
 
 regexs = {
     "email": "([a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+)",
-    "export": "reference={}.*?Found this image <b>(\d*?)<\/b>"
+    "export": "reference={}.*?Found this image <b>(\d*?)<\/b>",
+    "creditCard": r"(?:\D|)(\d{12,20}|\d{4}(?: |)\d{4}(?: |)\d{4}(?: |)\d{4}(?: |))(?:\D|)"
 },
 
 zoomlevel = 3, # the zoom level of the picture for the OCR
 
 threads_num = 5,
 results_delimiter = 100,
-thread_retry_timeout = 50, # seconds
+thread_retry_timeout = 360, # seconds
 
 sample_pic = "static/images/shot.png", # the pic uploaded each time you're getting the last seen link with "noisy" mode
 unwanted_folder = "unwanted",

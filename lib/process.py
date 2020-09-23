@@ -26,10 +26,10 @@ def process_img(threader, dirname, ocr_langs, words, img, link, lock, imghash, r
         timeout = cfg["thread_retry_timeout"]
         timeout_start = time.time()
         while imghash not in res.values():
-            if time.time() < timeout_start + timeout:
+            if time.time() > timeout_start + timeout:
                 log("Timeout while retrying, aborting thread.", timecode=dirname, cfg=cfg, level="ERROR", hidden=False, debug=debug)
                 break
-            sleep(0.5)
+            sleep(2)
             log("Retrying...", timecode=dirname, cfg=cfg, level="WARNING", hidden=False, debug=debug)
             res = threader.getresultDict()
         else:

@@ -1,4 +1,5 @@
 import re
+import luhn
 
 class Detection():
 
@@ -78,6 +79,14 @@ class Detection():
                 detec_state = self.updateState(group=group, word=substring, lang="", detec_state=detec_state)
         return detec_state
 
+    def creditCardDetection(self, group, regex, lang, text, detec_state):
+        res = re.compile(regex).findall(text)
+        if res:
+            for cb in res:
+                if luhn.verify(cb.replace(' ', '')):
+                    detec_state = self.updateState(group=group, word=cb, lang="", detec_state=detec_state)
+        return detec_state
+
     # Groups
     def credentials(self, text, words, regexs, detec_state):
         group_name = "credentials"
@@ -102,6 +111,7 @@ class Detection():
     def banking(self, text, words, regexs, detec_state):
         group_name = "banking"
         
+        detec_state = self.creditCardDetection(group_name, regexs["creditCard"], "", text, detec_state)
         detec_state = self.isolatedDetection(group_name, "IBAN", "", text, detec_state)
         detec_state = self.isolatedDetection(group_name, "RIB", "", text, detec_state)
         detec_state = self.isolatedDetection(group_name, "BIC", "", text, detec_state)
