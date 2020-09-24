@@ -83,7 +83,8 @@ class Detection():
         res = re.compile(regex).findall(text)
         if res:
             for cb in res:
-                if luhn.verify(cb.replace(' ', '')):
+                sanatized = cb.replace(' ', '')
+                if not sanatized.startswith("0") and luhn.verify(sanatized):
                     detec_state = self.updateState(group=group, word=cb, lang="", detec_state=detec_state)
         return detec_state
 
@@ -130,7 +131,7 @@ class Detection():
 
     def __init__(self, words, regexs):
         self.base_blacklist = [] # Add your blacklist here
-        #self.base_blacklist = ["royal-crypto", "royalcrypto", "bit-trading", "jiratrade"]
+        #self.base_blacklist = ["royal-crypto", "royalcrypto", "bit-trading", "jiratrade", "traderce"]
         self.groups = [self.credentials, self.banking, self.personal, self.confidential] # Add your groups here
 
         self.words = words

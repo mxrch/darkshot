@@ -8,13 +8,13 @@ min = "l0001",
 chars = "0123456789abcdefghijklmnopqrstuvwxyz",
 
 tessdata_folder = "", # If it can't auto guess the tessdata path, put it here
-ocr_langs = ["eng", "rus", "ara", "hin"], # See ISO languages codes here => https://cloud.google.com/translate/docs/languages
+ocr_langs = ["eng", "rus"], # See ISO languages codes here => https://cloud.google.com/translate/docs/languages
 
 # Think about the fact that the English is the most efficient (more trained),
 # and it works with other languages because they have a lot of characters in common
 # (French, Deutsch, Italian, etc..)
 
-keywords_langs = ["fr", "en", "ru", "de", "es", "ar", "it", "pt", "id", "hi"],
+keywords_langs = ["fr", "en", "ru", "de", "es", "it", "pt", "id"],
 
 # See languages codes here => https://github.com/tesseract-ocr/tessdata/
 
