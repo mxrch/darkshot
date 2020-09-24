@@ -9,3 +9,4 @@ beautifultable
 reprint
 click
 luhn
+imagehash

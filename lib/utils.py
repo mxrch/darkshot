@@ -19,6 +19,7 @@ from beautifultable import BeautifulTable
 from termcolor import colored
 from shutil import rmtree
 from lib.log import log
+import imagehash
 
 
 def run_algo(algo, min, limit, chars, stateFile, resume=True):
@@ -192,9 +193,7 @@ def check_n_create(path):
         makedirs(path)
 
 def image_hash(img):
-    output = BytesIO()
-    img.save(output, format='PNG')
-    hash = hashlib.md5(output.getvalue()).hexdigest()
+    hash = str(imagehash.average_hash(img))
     return hash
 
 def sum_stats(stats_list):
