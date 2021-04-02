@@ -1,6 +1,7 @@
 top_part = """<!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8">
 <link rel="stylesheet" href="{}static/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="{}static/css/view.css">
 <link rel="stylesheet" href="{}static/css/magnific-popup.css">
