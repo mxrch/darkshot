@@ -49,6 +49,8 @@ class Detection():
     def tradWrapper(self, detect_func, group, words, text, detec_state):
         for lang, trads in words.items():
             for trad in trads:
+                if isinstance(trad, list):
+                  trad = trad[0]
                 detec_state = detect_func(group=group, word=trad, lang=lang, text=text, detec_state=detec_state)
         return detec_state
 
