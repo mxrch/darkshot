@@ -18,16 +18,16 @@ def export(dirname, stats, link, imghash, img, text):
                 itempath = pathjoin(path, "data/{}/{}".format(groupname.lower(), imghash))
                 check_n_create(itempath)
                 img.save(itempath+"/image.png", format='PNG')
-                with open(itempath+"/raw.txt", "w") as f:
+                with open(itempath+"/raw.txt", "w", encoding="utf-8") as f:
                     f.write(text)
-                with open(itempath+"/links.txt", "w") as f:
+                with open(itempath+"/links.txt", "w", encoding="utf-8") as f:
                     f.write(f"https://prnt.sc/{link}\n")
-                with open(itempath+"/stats.txt", "w") as f:
+                with open(itempath+"/stats.txt", "w", encoding="utf-8") as f:
                     f.write(json.dumps(stats))
 
                 htmlfile = path+"/"+groupname+".html"
                 if not isfile(htmlfile):
-                    with open(htmlfile, 'w') as f:
+                    with open(htmlfile, 'w', encoding="utf-8") as f:
                         f.write(top_part.format(
                             "file:///"+pwd+"/",
                             "file:///"+pwd+"/",
