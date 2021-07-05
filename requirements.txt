@@ -1,5 +1,4 @@
 httpx
-google_trans_new
 pytesseract
 opencv-python
 pillow
