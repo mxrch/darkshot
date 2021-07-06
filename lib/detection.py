@@ -132,8 +132,8 @@ class Detection():
         return detec_state
 
     def __init__(self, words, regexs):
-        self.base_blacklist = [] # Add your blacklist here
-        #self.base_blacklist = ["royal-crypto", "royalcrypto", "bit-trading", "jiratrade", "traderce"]
+        #self.base_blacklist = [] # Add your blacklist here
+        self.base_blacklist = ["royal-crypto", "royalcrypto", "bit-trading", "jiratrade", "traderce", "bitxking", "sellbuy-btc", "crypto-wallet-btc", "crypto-trade24"]
         self.groups = [self.credentials, self.banking, self.personal, self.confidential] # Add your groups here
 
         self.words = words
