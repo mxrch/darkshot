@@ -93,7 +93,7 @@ hashlib
 
 ## 1. Tesseract-OCR
 
-You'll find installation instructions for all main platforms here : https://github.com/tesseract-ocr/tesseract/wiki \
+You'll find installation instructions for all main platforms here : https://tesseract-ocr.github.io/tessdoc/Downloads.html \
 **Don't forget to add tesseract to your PATH.**
 
 ## 2. Darkshot
@@ -101,7 +101,7 @@ You'll find installation instructions for all main platforms here : https://gith
 ```bash
 $ git clone https://github.com/mxrch/darkshot
 $ cd darkshot
-$ python -m pip install -r requirements.txt
+$ python3 -m pip install -r requirements.txt
 ```
 Then, we need to check if the chosen OCR langs in **config.py** are installed, and if not, it will auto-download and install them.
 - Run the file **check_ocr_langs.py** as Administrator.
