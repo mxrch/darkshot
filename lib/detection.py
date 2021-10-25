@@ -1,8 +1,9 @@
 import re
+
 import luhn
 
-class Detection():
 
+class Detection():
     # Functions
     def updateState(self, group, word, lang, detec_state):
         detec_state["groups"][group]["count"] += 1
@@ -47,11 +48,13 @@ class Detection():
         return {"detected": detected, "blacklists": blacklists, "state": detec_state}
 
     def tradWrapper(self, detect_func, group, words, text, detec_state):
+        words_cache = []
         for lang, trads in words.items():
             for trad in trads:
-                if isinstance(trad, list):
-                  trad = trad[0]
+                if trad in words_cache:
+                    continue
                 detec_state = detect_func(group=group, word=trad, lang=lang, text=text, detec_state=detec_state)
+                words_cache.append(trad)
         return detec_state
 
     # Detection functions

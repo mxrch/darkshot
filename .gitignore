@@ -1,5 +1,6 @@
 resume.json
 output/
-logs/
+logs/*.txt
 __pycache__/
 lib/__pycache__/
+.DS_Store

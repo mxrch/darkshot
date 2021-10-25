@@ -49,6 +49,8 @@ CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
             If you want want to specify multiple values, specify them comma-separated and without spaces. Ex: \"--clean logs,exports\""""
 )
 def start(threads, mode, algo, debug, clean, resume_ro):
+    if threads < 1:
+        exit("[-] Please put at least 1 thread.")
     main(threads, mode, algo, debug, clean, resume_ro)
 
 if __name__ == '__main__':

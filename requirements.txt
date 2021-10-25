@@ -1,5 +1,5 @@
 httpx
-google_trans_new
+translatepy
 pytesseract
 opencv-python
 pillow
