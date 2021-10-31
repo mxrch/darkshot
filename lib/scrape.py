@@ -36,7 +36,8 @@ def download(link, client, debug, dirname):
             return False
         log(f"Real image link for {link} => {imgur}", timecode=dirname, cfg=cfg, level="INFO", hidden=False, debug=debug)
     except Exception as e:
-        log(f"An error occured while requesting {imgur} :\n{e}", timecode=dirname, cfg=cfg, level="ERROR", hidden=False, debug=debug)
+        log(f"An error occured while requesting {link} :\n{e}", timecode=dirname, cfg=cfg, level="ERROR", hidden=False, debug=debug)
+        return False
 
     try:
         img = Image.open(BytesIO(req.content))
